@@ -1,0 +1,146 @@
+general:
+  enabled: true
+  # ALWAYS, LOOK, COMBAT, COMBAT_LOOK
+  default-mode: "ALWAYS"
+  language: "tr"
+
+# TextDisplay gorsel ayarlari
+display:
+  # Yazının mob/oyuncu kafasının üstünde daha düzgün durması için yükseltildi.
+  # Çok yüksek gelirse 0.85 - 1.00 arası deneyebilirsin.
+  height-offset: 1.05
+  shadowed: true
+  see-through: false
+  billboard: "CENTER"
+  # true iken TextDisplay arka planı tamamen şeffaf olur.
+  transparent-background: true
+  # Eski configte transparent-background false kalsa bile HUD arka planını şeffaf zorlar.
+  force-transparent-background: true
+  # transparent-background false yapılırsa kullanılacak arka plan rengi.
+  # Format: #AARRGGBB veya #RRGGBB + background-alpha
+  background-color: "#66000000"
+  background-alpha: 102
+  # 255 = yazı tam opak, 0 = görünmez.
+  text-opacity: 255
+  # Akici takip icin TextDisplay interpolation/teleport ayarlari.
+  smooth-movement: true
+  # Eski configte smoothing 1 kalsa bile en az 2 olarak uygular.
+  force-minimum-smoothing: true
+  interpolation-delay: 0
+  # 2-3 arası değerler mob hareketinde yazının daha yumuşak takip etmesini sağlar.
+  interpolation-duration: 2
+  teleport-duration: 2
+  remove-on-death: true
+  # Ozel isimli moblarda vanilla isim etiketi + plugin TextDisplay ismi ust uste binmesin diye gizlenir.
+  hide-vanilla-custom-name-while-displayed: true
+  # true iken named tag ile verilmiş özel isim, HUD aktifken geçici olarak saklanıp mobdan kaldırılır.
+  # Böylece imleci moba götürünce çıkan vanilla isim etiketi de görünmez.
+  clear-custom-name-to-block-crosshair-tag: true
+  # Scoreboard team üzerinden vanilla nametag görünürlüğünü NEVER yapar.
+  hide-vanilla-nametag-with-scoreboard-team: true
+  # Oyuncu isim etiketlerini de gizlemek istersen true yap. Varsayılan false bırakıldı.
+  hide-player-nametags: false
+
+format:
+  name-line: "&f&l%name%"
+  health-line: "&cCan: %bar% &e%health%&7/&f%max_health% &eCan"
+  heart-filled: "♥"
+  heart-empty: "♡"
+  heart-bar-length: 10
+  round-health: true
+  show-zero-health: false
+
+colors:
+  high: "&a"
+  medium: "&e"
+  low: "&6"
+  critical: "&c"
+  empty: "&7"
+
+visibility:
+  # true ise oyuncuların yakınındaki bütün canlıların isim/can göstergesi görünür.
+  # false yaparsan eski LOOK/COMBAT modları sadece baktığın veya savaştığın canlıları gösterir.
+  show-nearby-entities: true
+  show-players: true
+  show-hostile-mobs: true
+  show-passive-mobs: true
+  show-villagers: true
+  show-armor-stands: false
+  show-named-only: false
+  show-invisible-entities: false
+  hide-vanilla-custom-name: false
+  ignored-entity-types:
+    - ARMOR_STAND
+    - ITEM_DISPLAY
+    - BLOCK_DISPLAY
+    - TEXT_DISPLAY
+    - INTERACTION
+
+players:
+  enabled: true
+  show-self: false
+  show-others: true
+
+boss-integration:
+  enabled: true
+  beyhodboss-support: true
+  pdc-health-keys:
+    current:
+      - "bhboss:hp"
+      - "bhboss:boss_hp"
+      - "bhboss:current_hp"
+      - "custom:hp"
+      - "custom_health:hp"
+    max:
+      - "bhboss:maxhp"
+      - "bhboss:max_hp"
+      - "bhboss:boss_maxhp"
+      - "custom:maxhp"
+      - "custom_health:maxhp"
+
+combat:
+  display-duration-ticks: 100
+  mark-attacker-too: true
+
+look:
+  max-distance: 32.0
+  ray-size: 0.75
+
+performance:
+  # Gosterge artik 1 tickte bir calisir. Eski configte update-interval 5 kalsa bile fast-mode true iken 1 tick kullanilir.
+  fast-mode: true
+  startup-delay-ticks: 1
+  scan-radius: 48.0
+  update-interval-ticks: 1
+  # showEntity/hideEntity paketleri her tick basılmasın diye görünürlük ayrı aralıkla yenilenir.
+  visibility-refresh-interval-ticks: 10
+  # Yeni giren oyuncularda veya scoreboard değişimlerinde vanilla nametag gizleme tekrar senkronlanır.
+  nametag-team-refresh-interval-ticks: 10
+  instant-on-damage: true
+  max-displays-total: 1200
+  cleanup-on-disable: true
+
+damage-numbers:
+  enabled: false
+  normal-text: "&e-%damage%"
+  critical-text: "&c&l-%damage% Kritik!"
+
+mob-names:
+  use-turkish-names: true
+  names:
+    ZOMBIE: "Zombi"
+    SKELETON: "İskelet"
+    CREEPER: "Creeper"
+    SPIDER: "Örümcek"
+    CAVE_SPIDER: "Mağara Örümceği"
+    ENDERMAN: "Enderman"
+    BLAZE: "Blaze"
+    WITHER_SKELETON: "Wither İskeleti"
+    SHEEP: "Sheep"
+    COW: "Cow"
+    PIG: "Pig"
+    CHICKEN: "Chicken"
+    VILLAGER: "Villager"
+    IRON_GOLEM: "Iron Golem"
+    WARDEN: "Warden"
+    ENDER_DRAGON: "Ender Dragon"

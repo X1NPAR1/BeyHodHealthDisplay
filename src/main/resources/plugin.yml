@@ -1,0 +1,23 @@
+name: BeyHodHealthDisplay
+main: com.beyhod.healthdisplay.BeyHodHealthDisplayPlugin
+version: 1.0.4
+api-version: '1.21'
+author: BeyHod
+description: TextDisplay tabanli modern mob, oyuncu ve boss can gostergesi.
+softdepend:
+  - BeyHodBoss
+commands:
+  healthdisplay:
+    description: BeyHod Health Display ana komutu.
+    usage: /healthdisplay
+    aliases: [hd, can, hpgosterge]
+  hdadmin:
+    description: BeyHod Health Display admin komutu.
+    usage: /hdadmin
+permissions:
+  beyhodhealth.use:
+    description: Oyuncu health display komutlarini kullanir.
+    default: true
+  beyhodhealth.admin:
+    description: Admin reload, cleanup ve debug komutlarini kullanir.
+    default: op

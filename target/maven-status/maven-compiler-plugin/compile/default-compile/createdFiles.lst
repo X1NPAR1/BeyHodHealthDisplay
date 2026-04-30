@@ -1,0 +1,5 @@
+com\beyhod\healthdisplay\BeyHodHealthDisplayPlugin.class
+com\beyhod\healthdisplay\BeyHodHealthDisplayPlugin$HealthData.class
+com\beyhod\healthdisplay\BeyHodHealthDisplayPlugin$DisplayMode.class
+com\beyhod\healthdisplay\BeyHodHealthDisplayPlugin$HiddenNameState.class
+com\beyhod\healthdisplay\BeyHodHealthDisplayPlugin$DisplayEntry.class
