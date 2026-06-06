@@ -1,4 +1,4 @@
-# BeyHodHealthDisplay v6
+# BeyHodHealthDisplay v8
 
 Paper/Spigot 1.21.11 hedefli TextDisplay tabanlı can göstergesi.
 
